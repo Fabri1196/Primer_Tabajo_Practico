@@ -7,38 +7,29 @@
     <title>Primer trabajo práctico</title>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
 	<meta content="utf-8" http-equiv="encoding"> 
-    <script src="JavaScript.js"></script>
+    <script src="Main.js" defer></script>
+    <script src="Components/Calculador.js" defer></script>
+    <script src="Components/Reinvertir.js" defer></script>
+    <script src="Components/Errores.js" defer></script>
+    <script src="Mounter.js" defer></script>
+    <script src="https://unpkg.com/vue@3"></script>
     <link href="CSS.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Akshar:wght@500&family=Inspiration&family=Lato:ital@1&family=Nanum+Gothic&family=
     Radio+Canada&family=Roboto+Slab:wght@200&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1>Calculadora financiera</h1>
+    <div id="app">
+        <h1>{{ titulo }}</h1>
 
-    <div class="grid-layout">
-        <h2>Determine su ganancia al invirtir en un plazo fijo compuesto en una de nuestras sucursales</h2>
-        <div id="formulario">
-            <label>Nombre y Apellido: </label><input type="textbox" id="txtNombre"><br>
-            <label>Monto a invertir: </label><input type="number" id="monto"><br>
-            <label>Cantidad de dias: </label><input type="number" id="dias"><br>
-            <button type="sumbit" id="btnCalcular">Calcular</button>
+        <div class="grid-layout">
+
+            <calculador></calculador>
+
+        
         </div>
-    
-        <img src="https://assets.iprofesional.com/cdn-cgi/image/w=880,f=webp/https://assets.iprofesional.com/assets/jpg/2020/06/498740.jpg"
-        id="imagen-pf" alt="Imagen ilustrativa plazo fijo">
-
-        <div id="resultado"></div>
-        <div id="error"></div>
-        <div id="reinvertir">
-            ¿Desea reinvertir el capital?<br>
-            <button type="sumbit" id="btnReinvertir">Reinvertir</button>
-        </div>
-
-        <div id="tabla"></div>
-    
+        <hr>
+        <footer>{{ pie_pagina }}</footer>
     </div>
-    <hr>
-    <footer>Realizado por: Peirano Fabrizio Oscar - Estudiante de Tecnicatura Universitaria en Programación, UTN San Francisco</footer>
 
 </body>
 </html>
